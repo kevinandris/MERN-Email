@@ -19,10 +19,10 @@ app.get("/", (req, res) => {
 app.post("/api/sendemail", async (req, res) => {
     const {email} = req.body;
     try {
-        const send_to ="kevinandris27@gmail.com";
+        const send_to =email;
         const sent_from = process.env.EMAIL_USER;
-        const reply_to = "kevinandris27@gmail.com";
-        const subject = "Thank You Message"
+        const reply_to = email;
+        const subject = "Thank You Message from NodeCourse"
         const message = `
             <h3>Hello Kevin</h3>
             <p>Thank you for your kindness</p>
